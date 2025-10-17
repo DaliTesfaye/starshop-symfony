@@ -1,0 +1,33 @@
+<h1>
+	Welcome to Starshop Home Page!
+</h1>
+
+<div>
+	<h2>We currently have
+		{{ numberOfShips }}
+		starships available for sale.
+	</h2>
+	{% if numberOfShips > 400 %}
+		<p>That's a huge collection of starships!</p>
+	{% endif %}
+
+	<div>My Ships</div>
+	<table>
+		<tr>
+			<th>Name</th>
+			<td>{{ships.name | upper}}</td>
+		</tr>
+		<tr>
+			<th>Class</th>
+			<td>{{ships.class}}</td>
+		</tr>
+		<tr>
+			<th>Captain</th>
+			<td>{{ships.captain}}</td>
+		</tr>
+
+
+	</table>
+
+
+</div>
